@@ -13,7 +13,6 @@ project:
 
   components:
     - component: CMSIS:CORE
-    - component: CMSIS:RTOS2:Keil RTX5&Source
 
     - component: Device:Startup&Baremetal
 
@@ -21,3 +20,21 @@ project:
     - component: ARM::Native Driver:SysCounter
     - component: ARM::Native Driver:SysTimer
     - component: ARM::Native Driver:Timeout
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.5.4
+    - component: Keil::Network&MDK-Pro:Service:Web Server Compact&HTTP
+    - component: Keil::Network&MDK-Pro:Socket:TCP@7.19.0
+    - component: Keil::Network&MDK-Pro:Interface:WiFi
+    - component: Keil::CMSIS Driver:WiFi:ESP8266&UART@1.8.0
+    - component: Keil::CMSIS Driver:USART:CDC
+    - component: Keil::USB&MDK-Pro:CORE&Release
+    - component: Keil::USB&MDK-Pro:Host@6.17.0
+    - component: ARM::CMSIS Driver:USB Host:Custom@1.0.0
+    - component: Keil::USB&MDK-Pro:Host:CDC@6.17.0
+    - component: Keil::Network&MDK-Pro:Socket:UDP
+    - component: Keil::Network&MDK-Pro:CORE&IPv4/IPv6 Release@7.19.0
+  packs:
+    - pack: MDK-Packs::IoT_Socket@1.3.0
+    - pack: Keil::MDK-Middleware@7.17.0
+    - pack: lwIP::lwIP@2.2.0
+    - pack: ARM::CMSIS-Driver@2.8.0
+    - pack: ARM::CMSIS@5.9.0

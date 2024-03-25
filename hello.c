@@ -16,18 +16,20 @@
  * limitations under the License.
  *---------------------------------------------------------------------------*/
 
-#include <stdio.h>
-#include "main.h"
 #include "cmsis_os2.h"
+#include "main.h"
+#include <stdio.h>
+#include <string.h>
+static const char message[] = {"The quick brown fox jumps over the lazy dog."};
 
 /*---------------------------------------------------------------------------
  * Application main thread
  *---------------------------------------------------------------------------*/
 
-static void app_main (void *argument) {
+static void app_main(void *argument) {
   (void)argument;
 
-  for(int count = 0; count < 10; count++) {
+  for (int count = 0; count < 10; count++) {
     printf("Hello World %d\r\n", count);
     osDelay(1000U);
   }
@@ -37,6 +39,33 @@ static void app_main (void *argument) {
 /*---------------------------------------------------------------------------
  * Application initialization
  *---------------------------------------------------------------------------*/
-void app_initialize (void) {
-  osThreadNew(app_main, NULL, NULL);
-}
+void app_initialize(void) { osThreadNew(app_main, NULL, NULL); }
+
+// void Echo_Client_Thread(void *arg) {
+//   uint8_t ip[4] = {192U, 168U, 0U, 100U};
+//   int32_t sock, res;
+//   char dbuf[120];
+
+//   while (1) {
+//     sock = iotSocketCreate(IOT_SOCKET_AF_INET, IOT_SOCKET_SOCK_STREAM,
+//                            IOT_SOCKET_IPPROTO_TCP);
+
+//     res = iotSocketConnect(sock, (uint8_t *)ip, sizeof(ip), 7U);
+//     if (res == 0) {
+//       while (1) {
+//         iotSocketSend(sock, message, sizeof(message));
+//         res = iotSocketRecv(sock, dbuf, sizeof(dbuf));
+//         if (res < 0) {
+//           break; // Receive error
+//         }
+//         if (res > 0) {
+//           if (memcmp(dbuf, message, res) != 0) {
+//             break; // Message error, echoed message is not the same
+//           }
+//         }
+//         osDelay(1000U);
+//       }
+//     }
+//     iotSocketClose(sock);
+//   }
+// }

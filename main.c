@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------
- * Copyright (c) 2021-2023 Arm Limited (or its affiliates). 
+ * Copyright (c) 2021-2023 Arm Limited (or its affiliates).
  * All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -18,16 +18,17 @@
  *---------------------------------------------------------------------------*/
 
 #include "RTE_Components.h"
-#include  CMSIS_device_header
+#include CMSIS_device_header
 #include "cmsis_os2.h"
 
 #include "main.h"
 
-int main (void) {
+int main(void) {
 
-  osKernelInitialize();                 // Initialize CMSIS-RTOS2
-  app_initialize();                     // Initialize application
-  osKernelStart();                      // Start thread execution
+  osKernelInitialize(); // Initialize CMSIS-RTOS2
+  app_initialize();     // Initialize application
+  osKernelStart();      // Start thread execution
 
-  for (;;) {}
+  for (;;) {
+  }
 }

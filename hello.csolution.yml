@@ -6,6 +6,9 @@ solution:
   packs:
     - pack: ARM::CMSIS@5.9.0
     - pack: ARM::V2M_MPS3_SSE_300_BSP@1.3.0
+    - pack: MDK-Packs::IoT_Socket@1.3.0
+    - pack: ARM::CMSIS-Compiler@2.0.0
+    - pack: ARM::CMSIS-View@1.0.0
 
   target-types:
     - type: V2M-MPS3-SSE-300-FVP

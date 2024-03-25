@@ -1,0 +1,4 @@
+C:/Users/Administrator/Desktop/test/hello/build/CMakeFiles/database.dir
+C:/Users/Administrator/Desktop/test/hello/build/CMakeFiles/hello.dir
+C:/Users/Administrator/Desktop/test/hello/build/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/test/hello/build/CMakeFiles/rebuild_cache.dir

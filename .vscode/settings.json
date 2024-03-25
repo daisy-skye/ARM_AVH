@@ -1,0 +1,13 @@
+{
+    "cmsis-csolution.actions": [
+        {
+            "path": "hello.csolution.yml",
+            "target": "V2M-MPS3-SSE-300-FVP",
+            "config": {
+                "run": "virtual-hardware.run: Run Program",
+                "debug": "Arm Debugger"
+            }
+        }
+    ],
+    "cmake.sourceDirectory": "C:/Users/Administrator/Desktop/test/hello/tmp/hello/V2M-MPS3-SSE-300-FVP/Debug"
+}
